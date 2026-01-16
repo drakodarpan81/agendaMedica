@@ -21,7 +21,7 @@ class AppointmentManager extends Component
     ];
 
     public $specialities = [];
-    public $availability = [];
+    public $availabilities = [];
     public $selectedSchedules = [
         'doctor_id' => '',
         'schedules' => []
@@ -71,7 +71,7 @@ class AppointmentManager extends Component
         $this->appointment['date'] = $this->search['date'];
 
         //Buscar disponibilidad
-        $this->availability = $services->searchAvailability(...$this->search);
+        $this->availabilities = $services->searchAvailability(...$this->search);
         // dd($this->availability);
     }
 
